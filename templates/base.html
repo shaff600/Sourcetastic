@@ -13,6 +13,31 @@
     <title>Sourcetastic</title>
 </head>
 <body>
+        <header>
+            <!-- top nav bar -->
+            <nav class="nav-extended grey darken-3">
+                <div class="nav-wrapper">
+                  <a href="{{ url_for('get_resources')}}" class="brand-logo">Sourcetastic</a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">New Resource</a></li>
+                    <li><a href="#">New Category</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                  </ul>
+                </div>
+              </nav>
+            <!-- mobile nav bar -->
+              <ul class="sidenav" id="mobile-demo">
+                  <li><h4 class="center-align text-darken-4">Sourcetastic</h4></li>
+                <li><a href="{{ url_for('get_resources')}}">Dashboard</a></li>
+                <li><a href="#">New Resource</a></li>
+                <li><a href="#">New Category</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+              </ul>
+        </header>
 
     {% block content %}
     {% endblock %}
