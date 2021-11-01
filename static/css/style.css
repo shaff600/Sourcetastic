@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    background-image: linear-gradient(to bottom, #051937, #444964, #808195, #bfbec8, #ffffff);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+nav {
+    font-family: 'Permanent Marker', cursive;
+    padding-left: 10px;
+    opacity: 0.5;
+}
