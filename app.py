@@ -90,7 +90,8 @@ def logout():
 
 @app.route("/add_resources")
 def add_resources():
-    return render_template("add_resources.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_resources.html", categories=categories)
 
 
 if __name__ == "__main__":

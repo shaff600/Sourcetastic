@@ -12,6 +12,20 @@
         </div>
       </div>
       <div class="row">
+
+    <div class="input-field col s12">
+      <i class="fas fa-folder-open fa-3x prefix light-green-text text-darken-4"></i>
+      <select id="category_name" name="category_name" class="validate" required>
+        <option value="" disabled selected>Choose Category</option>
+        {% for  category in categories %}
+        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+        {% endfor %}
+      </select>
+      <label for="category_name">Tech Category</label>
+    </div>
+      </div>
+        
+      <div class="row">
         <div class="input-field col s12">
           <i class="fab fa-youtube fa-3x prefix light-green-text text-darken-4"></i>
           <input id="link" name="link" minlength="5"maxlength="50" type="text" class="validate white-text" required>
