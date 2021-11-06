@@ -88,8 +88,21 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_resources")
+@app.route("/add_resources", methods=["GET", "POST"])
 def add_resources():
+    if request.method == "POST":
+        submit_resource = {
+            "name": request.form.get("name"),
+            "category_name": request.form.get("category_name"),
+            "link": request.form.get("link"),
+            "description": request.form.get("description"),
+            "created_by": session["user"]
+        }
+
+        mongo.db.resources.insert_one(submit_resource)
+        flash("Resource added succesfully")
+        return redirect(url_for("get_resources", username=session["user"]))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_resources.html", categories=categories)
 
