@@ -1,0 +1,34 @@
+{% extends "base.html"%}
+{% block content %}
+  <h3 class="white-text center-align">Add Resources</h3>
+  
+  <div class="row card-panel grey lighten-4">
+    <form class="col s12" method="POST" action="">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fas fa-file-signature fa-3x prefix light-green-text text-darken-4"></i>
+          <input id="name" name="name" minlength="5"maxlength="50" type="text" class="validate white-text" required>
+          <label for="name">Resource Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fab fa-youtube fa-3x prefix light-green-text text-darken-4"></i>
+          <input id="link" name="link" minlength="5"maxlength="50" type="text" class="validate white-text" required>
+          <label for="link">YouTube Link</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fas fa-info fa-3x prefix light-green-text text-darken-4"></i>
+          <textarea id="description" name="description" class="materialize-textarea validate" required></textarea>
+          <label for="description">Resource Description</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+        
+        
+{% endblock %}
+    
