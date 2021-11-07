@@ -107,6 +107,15 @@ def add_resources():
     return render_template("add_resources.html", categories=categories)
 
 
+
+@app.route("/edit_resources/<resource_id>", methods=["GET", "POST"])
+def edit_resources(resource_id):
+    resource = mongo.db.resources.find_one({"_id": ObjectId(resource_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_resources.html", resource=resource, categories=categories)
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
