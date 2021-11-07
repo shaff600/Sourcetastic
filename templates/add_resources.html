@@ -6,42 +6,42 @@
     <form class="col s8 offset-s2 card" method="POST" action="{{ url_for('add_resources')}}">
       <div class="row">
         <div class="input-field col s12">
-          <i class="fas fa-file-signature fa-3x prefix light-green-text text-darken-4"></i>
+          <i class="fas fa-file-signature fa-3x prefix white-text text-darken-4"></i>
           <input id="name" name="name" minlength="5"maxlength="50" type="text" class="validate white-text" required>
-          <label for="name">Resource Name</label>
+          <label for="name" class="white-text">Resource Name</label>
         </div>
       </div>
       <div class="row">
 
     <div class="input-field col s12">
-      <i class="fas fa-folder-open fa-3x prefix light-green-text text-darken-4"></i>
-      <select id="category_name" name="category_name" class="validate" required>
-        <option value="" disabled selected>Choose Category</option>
+      <i class="fas fa-folder-open fa-3x prefix white-text text-darken-4"></i>
+      <select id="category_name" name="category_name" class="validate " required>
+        <option value="" disabled selected class="white">Choose Category</option>
         {% for  category in categories %}
-        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+        <option value="{{ category.category_name }}" >{{ category.category_name }}</option>
         {% endfor %}
       </select>
-      <label for="category_name">Tech Category</label>
+      <label for="category_name" class="white-text">Tech Category</label>
     </div>
       </div>
         
       <div class="row">
         <div class="input-field col s12">
-          <i class="fab fa-youtube fa-3x prefix light-green-text text-darken-4"></i>
+          <i class="fab fa-youtube fa-3x prefix white-text text-darken-4"></i>
           <input id="link" name="link" minlength="5"maxlength="200" type="text" class="validate white-text" required>
-          <label for="link">YouTube Link</label>
+          <label for="link" class="white-text">YouTube Link</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <i class="fas fa-info fa-3x prefix light-green-text text-darken-4"></i>
+          <i class="fas fa-info fa-3x prefix white-text text-darken-4"></i>
           <textarea id="description" name="description" class="materialize-textarea validate" required></textarea>
-          <label for="description">Resource Description</label>
+          <label for="description" class="white-text">Resource Description</label>
         </div>
       </div>
       <div class="row">
           <div class="col s12 center-align">
-            <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+            <button type="submit" class="btn-large teal lighten-1 darken-1 text-shadow">
                 Add Resource <i class="fas fa-plus-square right"></i>
 
             </button>

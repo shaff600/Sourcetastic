@@ -6,13 +6,14 @@
             <div class="row">
               {% for resource in resources %}
               <div class="col s12 m3"> 
-              <div class="card small">
+              <div class="card medium">
                 <div class="card-content">
                     <div class="video-container m3">
                         <iframe width="853" height="480" src="{{resource.link}}" frameborder="0" ></iframe>
                     </div>
                   <p>{{resource.description}}</p>
                   <p>by: {{resource.created_by}} </p>
+                  <p>category: {{resource.category_name}} </p>
                 </div>
                 <div class="card-action">
                   <a href="#">This is a link</a>

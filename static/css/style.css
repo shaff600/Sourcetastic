@@ -5,6 +5,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    background-image: url(../images/Ripple.svg);
+    color: #ffffff;
 }
 
 
@@ -12,6 +14,13 @@ nav {
     font-family: 'Permanent Marker', cursive;
     padding-left: 10px;
     opacity: 0.5;
+}
+h3 {
+    font-family: Permanent Marker;
+}
+input {
+    color: #ffffff;
+   
 }
 
 .flashes h4 {
