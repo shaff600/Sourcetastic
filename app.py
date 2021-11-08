@@ -129,6 +129,12 @@ def edit_resources(resource_id):
 
 
 
+@app.route("/delete_resource/<resource_id>")
+def delete_resources(resource_id):
+    mongo.db.resources.remove({"_id": ObjectId(resource_id)})
+    flash("Resource Deleted")
+    return redirect(url_for("get_resources"))
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
