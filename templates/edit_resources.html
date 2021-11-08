@@ -1,5 +1,8 @@
 {% extends "base.html"%}
 {% block content %}
+
+
+
   <h3 class="white-text center-align">Edit Resources</h3>
   
   <div class="row">
@@ -7,7 +10,7 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-file-signature fa-3x prefix white-text text-darken-4"></i>
-          <input id="name" name="name" minlength="5"maxlength="50" type="text" class="validate white-text" required>
+          <input id="name" name="name" minlength="5"maxlength="50" type="text" class="validate white-text" value="{{ resource.name }}" required>
           <label for="name" class="white-text">Resource Name</label>
         </div>
       </div>
@@ -16,9 +19,13 @@
     <div class="input-field col s12">
       <i class="fas fa-folder-open fa-3x prefix white-text text-darken-4"></i>
       <select id="category_name" name="category_name" class="validate " required>
-        <option value="" disabled selected class="white">Choose Category</option>
+        <option value="" disabled class="white">Choose Category</option>
         {% for  category in categories %}
-        <option value="{{ category.category_name }}" >{{ category.category_name }}</option>
+          {% if category.category_name == resource.category_name %}
+            <option value="{{ category.category_name }}" selected >{{ category.category_name }}</option>
+          {% else %}  
+          <option value="{{ category.category_name }}"  >{{ category.category_name }}</option>
+          {% endif %}  
         {% endfor %}
       </select>
       <label for="category_name" class="white-text">Tech Category</label>
@@ -28,19 +35,24 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="fab fa-youtube fa-3x prefix white-text text-darken-4"></i>
-          <input id="link" name="link" minlength="5"maxlength="200" type="text" class="validate white-text" required>
+          <input id="link" name="link" minlength="5"maxlength="200" type="text" class="validate white-text" value="{{ resource.link }} "required>
           <label for="link" class="white-text">YouTube Link</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-info fa-3x prefix white-text text-darken-4"></i>
-          <textarea id="description" name="description" class="materialize-textarea validate" required></textarea>
+          <textarea id="description" name="description" class="materialize-textarea validate white-text"  required>
+            {{- resource.description -}}
+          </textarea>
           <label for="description" class="white-text">Resource Description</label>
         </div>
       </div>
       <div class="row">
           <div class="col s12 center-align">
+            <a href="{{ url_for('get_resources')}}" class="btn-large red text shadow">
+                Cancel
+            </a>
             <button type="submit" class="btn-large teal lighten-1 darken-1 text-shadow">
                 Edit Resource <i class="fas fa-edit-square right"></i>
 
