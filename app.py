@@ -109,7 +109,20 @@ def add_resources():
 
 
 @app.route("/edit_resources/<resource_id>", methods=["GET", "POST"])
-def edit_resources(resource_id):
+def edit_resources(resource_id): 
+    if request.method == "POST":
+        edit_resource = {
+            "name": request.form.get("name"),
+            "category_name": request.form.get("category_name"),
+            "link": request.form.get("link"),
+            "description": request.form.get("description"),
+            "created_by": session["user"]
+        }
+
+        mongo.db.resources.update({"_id": ObjectId(resource_id)}, edit_resource)
+        flash("Resource Succesfully Updated")
+        return redirect(url_for("get_resources", username=session["user"]))
+
     resource = mongo.db.resources.find_one({"_id": ObjectId(resource_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_resources.html", resource=resource, categories=categories)
