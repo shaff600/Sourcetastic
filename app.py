@@ -28,6 +28,7 @@ def get_resources():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """method used to register a new user"""
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -134,6 +135,13 @@ def delete_resources(resource_id):
     mongo.db.resources.remove({"_id": ObjectId(resource_id)})
     flash("Resource Deleted")
     return redirect(url_for("get_resources"))
+
+
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name",1))
+    return render_template("categories.html", categories=categories)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
