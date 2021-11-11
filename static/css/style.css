@@ -20,7 +20,13 @@ h3 {
 }
 input {
     color: #ffffff;
-   
+}
+p {
+    font-family: 'Outfit', sans-serif;
+}
+strong {
+    text-decoration: underline;
+    text-decoration-color: aqua;
 }
 
 .flashes h4 {
