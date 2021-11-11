@@ -10,10 +10,16 @@ body {
 }
 
 
+
 nav {
     font-family: 'Permanent Marker', cursive;
     padding-left: 10px;
-    opacity: 0.5;
+    opacity: 0.3;
+}
+
+nav ul a {
+    color: #ffffff;
+    font-size: 1.3rem;
 }
 h3 {
     font-family: Permanent Marker;
