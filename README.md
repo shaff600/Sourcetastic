@@ -1,14 +1,26 @@
 
+  Python Flask Video Uploading Web Application
 # Purpose 
-Python Flask Video Uploading Web Application
-
+This application was developed to aid small tech teams to collaborate and share YouTube learning resources in one centralized system. I have found myself within several online tech communities where members where posting links for learning resources but they used to get lost with an array of different messages. This application was developed to solve that issue.
 # User Experience (UX)
 ## Stratergy: 
+This application will allow a member to create an account and add learning resources to share with other users. A user can only edit or delete there OWN resource and do not have access to alter other team members content. There is also an Admin account where they have the additional functionality of adding a category. This user will tend to be a moderator or an the lead of the community.
+
+The objective is to create a platform where members of a community can share learning resources for a range of different tech categories. Although the application is appropriate for people of all ages, the interface must be visually pleasing to boost user engagement and acceptability across different age groups
+
+-	### User stories
+	-	As a user, I would like to view all learning resources 
+	-	As a user, I would like to be instructions on how to add a new resource
+	-	As a user, I would like to edit and delete a post 
+	-	As a user, I would like to know who has created a post
+	-	As a user, I would like informed responses on system actions 
+	-	As a user, I would like to view the application on various devices 
 
 ## Scope:
-
+The application has a set of categories that are restricted by the admin user. This is to ensure that the categories are aligned to what the tech community are intrested in and prevent users from adding content that aren't relevant. There are no limitations to how many resources a user can add within the application.
 
 ## Structure:
+The python template engine of "Jinja" also known as Jinja2. Jinja2 is a modern day templating language for Python developers. Jinija templates include inheritance which essentially are used to prevent repeated code. This saves a lot of time and reduces work. A base template contains the basic layout which is common to all the other templates. This is beneficial as it provides a level of consistency throughout the application structure. 
 
 ## Skeleton:
 
@@ -96,9 +108,3 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Sources 
 
 ### Acknowledgements
-
-
-
-
-
-
