@@ -26,6 +26,10 @@ def get_resources():
     return render_template("resources.html", resources=resources)
 
 
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """method used to register a new user"""

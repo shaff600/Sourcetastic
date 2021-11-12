@@ -30,6 +30,10 @@ input {
 p {
     font-family: 'Outfit', sans-serif;
 }
+#landing-img{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 strong {
     text-decoration: underline;
     text-decoration-color: aqua;
