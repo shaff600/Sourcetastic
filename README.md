@@ -88,7 +88,7 @@ My initial design did not include a landing page, instead the user was navigated
 
 # Testing
 
-Please find the results of my tetsting [here](TESTING.md)
+Please find the results of my tetsting [here](Testing.md)
 	
 
 ## Testing User Stories from User Experience (UX) Section
