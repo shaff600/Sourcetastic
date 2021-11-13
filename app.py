@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -29,6 +29,7 @@ def get_resources():
 @app.route("/home")
 def home():
     return render_template("home.html")
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -112,9 +113,8 @@ def add_resources():
     return render_template("add_resources.html", categories=categories)
 
 
-
 @app.route("/edit_resources/<resource_id>", methods=["GET", "POST"])
-def edit_resources(resource_id): 
+def edit_resources(resource_id):
     if request.method == "POST":
         edit_resource = {
             "name": request.form.get("name"),
@@ -124,14 +124,15 @@ def edit_resources(resource_id):
             "created_by": session["user"]
         }
 
-        mongo.db.resources.update({"_id": ObjectId(resource_id)}, edit_resource)
+        mongo.db.resources.update(
+            {"_id": ObjectId(resource_id)}, edit_resource)
         flash("Resource Succesfully Updated")
         return redirect(url_for("get_resources", username=session["user"]))
 
     resource = mongo.db.resources.find_one({"_id": ObjectId(resource_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_resources.html", resource=resource, categories=categories)
-
+    return render_template(
+        "edit_resources.html", resource=resource, categories=categories)
 
 
 @app.route("/delete_resource/<resource_id>")
@@ -143,7 +144,7 @@ def delete_resources(resource_id):
 
 @app.route("/get_categories")
 def get_categories():
-    categories = list(mongo.db.categories.find().sort("category_name",1))
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
 
