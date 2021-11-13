@@ -13,6 +13,9 @@ Testing was done throughout the project via chrome development tools. I also use
 ## Validators
 
 - ### [WC3](https://validator.w3.org/nu/)
+- As the Jinja template was being used througout the HTML pages, the validator was indicating error where it picked up the Jinja syntax. There where some minor usses with the HTML of which I have rectified:
+- ![add_resource.html](docs/issue1.png)
+- ![edit_resource.html](docs/issue2.png)
 
     - ### add_category.html
     ![add_category.html](docs/test_addcategory.png)
