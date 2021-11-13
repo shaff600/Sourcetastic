@@ -17,9 +17,9 @@ Testing was done throughout the project via chrome development tools. I also use
     - ### add_category.html
     ![add_category.html](docs/test_addcategory.png)
     - ### add_resources.html
-    ![add_resources.html](docs/test_addresources.png)
+    ![add_resources.html](docs/test_addresource.png)
     - ### base.html
-    ![base.html](docs/test_base.html.png)
+    ![base.html](docs/test_base.png)
     - ### category.html
     ![categories.html](docs/test_category.png)
     - ### edit_category.html
@@ -31,4 +31,4 @@ Testing was done throughout the project via chrome development tools. I also use
     - ### register.html
     ![register.html](docs/test_register.png)
     - ### resources.html
-    ![resources.html](docs/resources.png)
+    ![resources.html](docs/test_resources.png)
