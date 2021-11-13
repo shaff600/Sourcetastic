@@ -35,3 +35,14 @@ Testing was done throughout the project via chrome development tools. I also use
     ![register.html](docs/test_register.png)
     - ### resources.html
     ![resources.html](docs/test_resources.png)
+    
+- ### [PEP8](http://pep8online.com/)
+  - ### before
+    ![](docs/test_PEP8before.png)
+   - ### after
+    ![](docs/test_PEP8after.png)
+    
+- ### [JSHint]()
+
+    - ### script.js
+    ![script.js](docs/JSlint.png)
