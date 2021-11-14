@@ -89,69 +89,99 @@ My initial design did not include a landing page, instead the user was navigated
 # Testing
 
 Please find the results of my tetsting [here](Testing.md)
-	
-
-## Testing User Stories from User Experience (UX) Section
-
-
-  ## Manual Testing 
-
-
-### Known Bugs
-
-
-### Issues Faced
-
-
 
 ### Future Development 
 
 ## Deployment
 
-### GitHub Pages
+## Forking the GitHub Repository
 
-The project was deployed to GitHub Pages using the following steps...
+Forking a repository enables us to make a copy of the original repository on our GitHub account so we can view it and make changes with out affecting the original work.
+This is done using the following steps:
+ 1. Log in to [GitHub](https://github.com/shaff600) account and select the relevant repository.
+ 2. To the top right of the page there are three the buttons, the furthest right says **Fork.** Click on this button.
+ 3. A copy of the original repository will now be in your account.
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/shaff600)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://shaff600.github.io) in the "GitHub Pages" section.
+## Making a Clone
 
-### Forking the GitHub Repository
+To make a clone of my project use the following steps:
+ 1. Go to my [account](https://github.com/shaff600) and locate relevant repository.
+ 2. Next to the green **Gitpod** button, click on **CODE.**
+ 3. Click on **Download Zip.**
+ 4. Once dowloaded, you can extract the zip file's contents and save to a desktop and run the website locally.
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+ ## MongoDB
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+ - Create and account
+ - Create a cluster
+ - Select your region (or the closest one)
+ - Go to Database Access and Add new database user
+ - In drop down menu select 'read and write to any database'
+ - In main menue, select Network Access and Add IP address
+ - In collections section of your cluster select 'Create Database'
+ - Create your first collection when prompted, then add your requiered collections
+ - Insert documents via the 'Insert Document' button
+ 
+ ## Setting up the app
 
-### Making a Local Clone
+ - Within you work inviroment terminal:
+    - instal Flask. 'pip3 install Flask' 
+    - Create files. 
+        - 'touch app .py'
+        - 'touch env .py'
+        - 'touch .gitignore'
+- Within the .gitignore file add:
+    - env .py
+    - __ pycache __/
+- Within the env .py file, import operating systems, and enviroment variables:
+    - 'import os'
+    - 'os.environ.setdefault("IP". "0.0.0.0")'
+    - 'os.environ.setdefault("PORT", "5000")'
+    - 'os.environ.setdefault("SERCRET_KEY", "YOUR SECRET KEY")' I used [RandomKeyGen](https://randomkeygen.com/) to get my secret key.
+    - 'os.environ.setdefault("MONGO_URI", "YOUR MONGO URI")' 
+        - To get you monmgo URI go to; Cluster > Overview > Connect > Connect your application. Choose the version of Python you are using, then you can copy and past the sting thats displayed. You will have to update the <database name> and <password>.
+    - 'os.environ.setdefault("MONGO_DBNAME", "YOUR DATABASE NAME")
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
+- Within the app .py file, import opperating systems and flask requirements:
+    - 'import os'
+    - 'from flask import Flask, flash, render_template, redirect, request, session, url_for'
+    - 'if os.path.exists("env,py"): import env' 
+    - Create app variable:
+        - 'app = Flask (__ name __)
 
-```
-$ git clone https://github.com/shaff600/TriviaGameNight
-```
+## Deploying to Heroku
 
-7. Press Enter. Your local clone will be created.
+- Set up the files that Heroku will need. In the terminal of your work enviroment type:
+    - 'pip3 freeze --lead > requirements.txt
+    - 'echo web: python app .py > Procfile'
 
-```
-$ git clone ****
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done .
-```
+- Push files to github before deploying to Heroku
 
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+- On Heroku:
+    - Create a new app
+    - pick deployment method 'Github' for automatic deployment
+    - find your repo and connect to app
+    - go to settings > Reveal Config vars
+        - Add IP, PORT, SECRET_KEY, MONGO_URI and MONGO_DBNAME
+    - enable auto deployment
+    - deploy
+
+## Connect Flask to MongoDB
+
+- In the terminal of your work enviroment:
+    - 'pip3 install flask-pymongo'
+    - 'pip3 install dnspython'
+    - pip3 freeze -- local > requirements.txt
+
+- In yopur app-py file:
+    - 'from flask_pymongo import PyMongo
+    - 'from bson.objectid import ObjectId'
+    - 'app.config["MONGO_DBNAME"] = os.environ.get["MONGO_DBNAME"]
+    - 'app.config["MONGO_URI"] = os.environ.get["MONGO_URI"]
+    - 'app.secret_key = os.environ.get["SECRET_KEY"]
+    - 'mongo = PyMongo(app)'
+    
+ 
 
 ## Credits
 
