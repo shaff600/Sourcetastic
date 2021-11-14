@@ -24,7 +24,9 @@ nav ul a {
     font-size: 1.3rem;
 }
 
-
+form {
+    padding: 10px;
+}
 h1, h2 {
     font-family: Permanent Marker;
 }
