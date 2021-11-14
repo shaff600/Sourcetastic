@@ -1,8 +1,7 @@
-
-  Python Flask Video Uploading Web Application
-  <h1 align="center">Trivia Game Night</h1>
+  <h1 align="center">Python Flask YouTuve Uploading Web Application</h1>
 <img width="903" alt="devices" src="docs/devices.png"> 
-# Purpose 
+
+# Purpose:
 This application was developed to aid small tech teams to collaborate and share YouTube learning resources in one centralized system. I have found myself within several online tech communities where members where posting links for learning resources but they used to get lost with an array of different messages. This application was developed to solve that issue.
 # User Experience (UX)
 ## Stratergy: 
@@ -90,9 +89,13 @@ My initial design did not include a landing page, instead the user was navigated
 
 # Testing
 
-For the testng of the application I have validated my code and run the application through some user acceptance testing. This involved writing test cases and running the application through given scenarios to see how it responds. Please find the results of my tetsting [here](Testing.md)
+-	For the testng of the application I have validated my code and run the application through some user acceptance testing. This involved writing test cases and running the application through given scenarios to see how it responds. Please find the results of my tetsting [here](Testing.md)
 
 ### Future Development 
+-	The application currently only lets user's add YouTube links, I would like to expand this so that user's can also include web links. 
+-	HTML attributes have been set to include a pre-defined value which user's can delete. I would want to include more validation in the future
+-	There are few minor issues with styling that would need rectifying. For some reason, my browser that I was testing on was not refreshing when making 		changes which was strange on my final day of development. I'm sure if i had more time I would have been able to fix. 
+
 
 ## Deployment
 
@@ -182,11 +185,11 @@ To make a clone of my project use the following steps:
     - 'app.config["MONGO_URI"] = os.environ.get["MONGO_URI"]
     - 'app.secret_key = os.environ.get["SECRET_KEY"]
     - 'mongo = PyMongo(app)'
-    
- 
 
 ## Credits
 
 ### Sources 
+-	CI Mini Project was very helpful in creating this project. The concepts where altered accordingly to meet my applications needs.
 
 ### Acknowledgements
+-	I would like to thank my mentor, Marcel for his encouragement as I had less then 3 weeks to complete this project. 
