@@ -8,7 +8,8 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-file-signature fa-3x prefix white-text text-darken-4"></i>
-          <input id="name" name="name" minlength="5" maxlength="50" type="text" class="validate white-text" value="{{ resource.name }}" required>
+          <input id="name" name="name" minlength="5" maxlength="50" type="text" class="validate white-text" value="{{ resource.name }}"
+          aria-label="Enter resource name" required>
           <label for="name" class="white-text">Resource Name</label>
         </div>
       </div>
@@ -33,7 +34,8 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="fab fa-youtube fa-3x prefix white-text text-darken-4"></i>
-          <input id="link" name="link" minlength="5" maxlength="200" type="text" class="validate white-text" value="{{ resource.link }} "required>
+          <input id="link" name="link" minlength="5" maxlength="200" type="text" class="validate white-text" value="{{ resource.link }}" 
+          aria-label="Enter YouTube link"required>
           <label for="link" class="white-text">YouTube Link</label>
         </div>
       </div>
