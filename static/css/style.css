@@ -32,7 +32,7 @@ input {
 }
 p {
     font-family: 'Outfit', sans-serif;
-    font-size: 2em;
+    font-size: 1.7vh;
 }
 #landing-img{
     padding-top: 5%;
@@ -42,7 +42,11 @@ strong {
     text-decoration: underline;
     text-decoration-color: aqua;
 }
-
+iframe {
+height: 10vh;
+width: 100vw;
+position:fixed;
+}
 
 .flashes h4 {
     line-height: 2;
@@ -70,4 +74,28 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .modal-footer {
     text-align: center !important;
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+   p{
+       font-size: 1.1em;
+   }
+   btn-small {
+       font-size: 1rem;
+   }
+
+}
+
+  /*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 360px to 479px
+*/
+@media only screen and (max-width: 600px) {  
+    p {
+        font-size: 1.3rem;
+    }
 }

@@ -1,20 +1,21 @@
 {% extends "base.html"%} 
 {% block content %}
 
-<h3 class="white-text text-darken-4 center-align">Dashboard</h3>
+<h2 class="white-text center-align">Dashboard</h2>
 <div class="container">
     <div class="row">
         {% for resource in resources %}
-        <div class="col s12 m3">
-            <div class="card medium">
+        <div class="col s12 m4">
+            <div class="card large">
                 <div class="card-content">
-                    <div class="video-container m3">
-                        <iframe width="853" height="480" src="{{resource.link}}" frameborder="0"></iframe>
+                    <div class="video-container">
+                        <iframe width="10" height="10" src="{{resource.link}}" frameborder="0"></iframe>
                     </div>
-                    <p> <strong>Name:</strong> {{resource.name}}</p>
+                    <br><p> <strong>Name:</strong> {{resource.name}}</p> 
                     <p> <strong>Category:</strong>  {{resource.category_name}}</p>
                     <p> <strong>Description:</strong>  {{resource.description}}</p>
                     <p> <strong>Created By:</strong>  <em>{{resource.created_by}} </em></p>
+                
                 </div>
                 <div class="card-action center-align">
                     {% if session.user |lower == resource.created_by|lower %}
@@ -29,7 +30,7 @@
                 <h3>Warning</h3>
                 <p>Are you Sure You Want To Delete "{{ resource.name }}"?</p>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer ">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
                 <a href="{{ url_for('delete_resources', resource_id=resource._id) }}" class="modal-close waves-effect waves-green btn-flat center-align">Yes</a>
             </div>
