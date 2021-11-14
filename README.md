@@ -191,6 +191,9 @@ To make a clone of my project use the following steps:
 
 ### Sources 
 -	CI Mini Project was very helpful in creating this project. The concepts where altered accordingly to meet my applications needs.
+-  	The CSS generator that was used for the background styling for cards, [Glassmorphism](https://hype4.academy/tools/glassmorphism-generator), this was an excellent tool of which I'm sure I'll use again for future proect
+-	I've also implemented [Materailze](https://materializecss.com/getting-started.html) components into my application for the general stlying. 		This has been my favourite front end framework and enjoyed playing around with it on this project. 
 
 ### Acknowledgements
 -	I would like to thank my mentor, Marcel for his encouragement as I had less then 3 weeks to complete this project. 
+-	I would like to also thank the CI tutors for supporting me through issues faced on the project and sharing different troubleshooting options which I've not previously used.
