@@ -84,7 +84,7 @@ My initial design did not include a landing page, instead the user was navigated
 
 7.  [Balsamiq:](https://balsamiq.com/)
 
--   Balsamiq was used to create the  [wireframes](https://github.com/)  during the design process.
+-   Balsamiq was used to create the  [wireframes](https://github.com/shaff600/Sourcetastic/tree/main/docs)  during the design process.
 
 
 # Testing
