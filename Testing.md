@@ -4,15 +4,16 @@ Testing was done throughout the project via chrome development tools. I also use
 ## Contents
 
 - [Validators](#validators)
-    - [WC3](#wc3)
+    - [W3C](#w3c)
     - [PEP8](#pep8)
     - [JSHint](#jshint)
     - [User Stories](#user-stories)
     - [Manual Testing](#manual-testing)
+    - [Summary](#summary)
 
 ## Validators
 
-- ### [WC3](https://validator.w3.org/nu/)
+- ### [W3C](https://validator.w3.org/nu/)
 - As the Jinja template was being used througout the HTML pages, the validator was indicating error where it picked up the Jinja syntax. There where some minor usses with the HTML of which I have rectified:
 - ![add_resource.html](docs/issue1.png)
 - ![edit_resource.html](docs/issue2.png)
@@ -46,7 +47,6 @@ Testing was done throughout the project via chrome development tools. I also use
 
     - ### script.js
     ![script.js](docs/JSlint.png)
-    
     
     
 ## User Stories
@@ -167,3 +167,7 @@ Click "No" on modal | modal closes down | PASS
 Click "Yes" on modal | label displayed and category is removed from group of categories | PASS
 Click "Add Category" | user is able to enter a new category | PASS
 
+# Summary
+   -   As a result of running the validator for the HTML, it was shown that the jinja templating language was causing issues however this is expected as the tool is not recognising the templating lanugage. There where few minor error it had picked up which was swiftly rectified. 
+   -   There where no issues with testing against the user stories.
+   -   Currently a user can delete the pre-defined HTML value when entering a YouTube link which may cause issues, i.e a user may overwrite the Youtube link that does not incude embedded elements. More work would need to be done here to validate the user's input to ensure it meets the requirments for an embedded link.
