@@ -90,7 +90,7 @@ My initial design did not include a landing page, instead the user was navigated
 
 # Testing
 
-Please find the results of my tetsting [here](Testing.md)
+For the testng of the application I have validated my code and run the application through some user acceptance testing. This involved writing test cases and running the application through given scenarios to see how it responds. Please find the results of my tetsting [here](Testing.md)
 
 ### Future Development 
 
