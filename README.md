@@ -1,5 +1,7 @@
 
   Python Flask Video Uploading Web Application
+  <h1 align="center">Trivia Game Night</h1>
+<img width="903" alt="devices" src="docs/devices.png"> 
 # Purpose 
 This application was developed to aid small tech teams to collaborate and share YouTube learning resources in one centralized system. I have found myself within several online tech communities where members where posting links for learning resources but they used to get lost with an array of different messages. This application was developed to solve that issue.
 # User Experience (UX)
