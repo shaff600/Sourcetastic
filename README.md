@@ -44,8 +44,9 @@ My initial design did not include a landing page, instead the user was navigated
 
 ## Features
 -	Connectivity to mongoDB database. 
--	User can Create, Read, Update and Delete items from database.
--	Responsive on all device sizes
+-	A user can register an account and share YouTube learning resources. They have the ability to edit or delete their content. A user can log out. 
+-	An Admin user can do the above along with having the additonal functionality of adding learning resources.
+-	Application is responsive on all device sizes
 
 ## Technologies Used
 
