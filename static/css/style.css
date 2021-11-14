@@ -8,22 +8,18 @@ body {
     background-image: url(../images/Ripple.svg);
     color: #ffffff;
 }
-
 .fas{
-    padding: 5px
+    padding: 5px 
 }
-
 nav {
     font-family: 'Permanent Marker', cursive;
     padding-left: 10px;
     opacity: 0.3;
 }
-
 nav ul a {
     color: #ffffff;
     font-size: 1.3rem;
 }
-
 form {
     padding: 10px;
 }
@@ -46,21 +42,20 @@ strong {
     text-decoration-color: aqua;
 }
 iframe {
-height: 10vh;
-width: 100vw;
-position:fixed;
+    height: 10vh;
+    width: 100vw;
+    position:fixed;
 }
-
 .flashes h4 {
     line-height: 2;
 }
 .card{
     background: rgba( 3, 0, 0, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 2.5px );
--webkit-backdrop-filter: blur( 2.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2.5px );
+    -webkit-backdrop-filter: blur( 2.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .delete-card {
     background: rgba( 255, 255, 255, 0.25 );
@@ -70,35 +65,27 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-
 .btn-small {
     margin: 6px;
-
 }
 .modal-footer {
     text-align: center !important;
 }
-
-/*
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
-   p{
-       font-size: 1.1em;
+    p{
+        font-size: 1.1em;
    }
-   btn-small {
-       font-size: 1rem;
+    btn-small {
+        font-size: 1rem;
    }
-
 }
-
-  /*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 360px to 479px
-*/
-@media only screen and (max-width: 600px) {  
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 360px to 479px */
+@media only screen and (max-width: 600px) {
     p {
         font-size: 1.3rem;
-    }
+   }
+    h1 {
+        font-size: 1.7rem;
+   }
 }
